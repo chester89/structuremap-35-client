@@ -6,3 +6,4 @@ using System.Reflection;
 
 [assembly: AssemblyTitle("StructureMap.AutoMocking")]
 [assembly: AssemblyDescription("")]
+[assembly: AssemblyVersion("2.6.3")]

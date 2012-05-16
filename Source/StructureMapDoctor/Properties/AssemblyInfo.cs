@@ -5,3 +5,4 @@ using System.Reflection;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("StructureMapDoctor")]
+[assembly: AssemblyVersion("2.6.3")]

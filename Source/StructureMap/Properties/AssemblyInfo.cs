@@ -9,6 +9,7 @@ using System.Security;
 //
 
 [assembly: AssemblyTitle("StructureMap")]
+[assembly: AssemblyVersion("2.6.3")]
 [assembly: AssemblyDescription("Main Library")]
 [assembly:
     InternalsVisibleTo(
