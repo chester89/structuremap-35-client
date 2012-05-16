@@ -189,7 +189,7 @@ namespace StructureMap.Configuration.DSL.Expressions
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>
-        UserControlInstance LoadControlFrom(string url);
+        //UserControlInstance LoadControlFrom(string url);
 
         /// <summary>
         /// Creates an Instance according to conditional rules
@@ -285,10 +285,10 @@ namespace StructureMap.Configuration.DSL.Expressions
             return returnInstance(new SerializedInstance(template));
         }
 
-        public UserControlInstance LoadControlFrom(string url)
-        {
-            return returnInstance(new UserControlInstance(url));
-        }
+        //public UserControlInstance LoadControlFrom(string url)
+        //{
+        //    return returnInstance(new UserControlInstance(url));
+        //}
 
         public ConditionalInstance<T> Conditional(
             Action<ConditionalInstance<T>.ConditionalInstanceExpression> configuration)

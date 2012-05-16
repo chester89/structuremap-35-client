@@ -19,10 +19,10 @@ namespace StructureMap
             AddMementoSourceType<XmlFileMementoSource>("XmlFile");
 
             AddLifecycleType<SingletonLifecycle>(InstanceScope.Singleton);
-            AddLifecycleType<HttpContextLifecycle>(InstanceScope.HttpContext);
-            AddLifecycleType<HttpSessionLifecycle>(InstanceScope.HttpSession);
-            AddLifecycleType<HybridLifecycle>(InstanceScope.Hybrid);
-            AddLifecycleType<HybridSessionLifecycle>(InstanceScope.HybridHttpSession);
+            //AddLifecycleType<HttpContextLifecycle>(InstanceScope.HttpContext);
+            //AddLifecycleType<HttpSessionLifecycle>(InstanceScope.HttpSession);
+            //AddLifecycleType<HybridLifecycle>(InstanceScope.Hybrid);
+            //AddLifecycleType<HybridSessionLifecycle>(InstanceScope.HybridHttpSession);
             AddLifecycleType<ThreadLocalStorageLifecycle>(InstanceScope.ThreadLocal);
         }
 

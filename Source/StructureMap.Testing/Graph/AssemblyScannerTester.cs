@@ -70,8 +70,7 @@ namespace StructureMap.Testing.Graph
             scanner.ScanForAll(theGraph);
             theGraph.Log.AssertFailures();
         }
-
-
+        
         private void shouldHaveFamily<T>()
         {
             theGraph.PluginFamilies.Contains(typeof (T)).ShouldBeTrue();
@@ -384,8 +383,31 @@ namespace StructureMap.Testing.Graph
             shouldNotHaveFamily<IInterfaceInWidget5>();
             shouldHaveFamily<ITypeThatHasAttributeButIsNotInRegistry>();
         }
+
+        [Test]
+        public void should_register_type_as_single_implementation()
+        {
+            Scan(ac =>
+                     {
+                         //ac.WithDefaultConventions();
+                         ac.AssemblyContainingType<ISingleInterface>();
+                         ac.SingleImplementationsOfInterface();
+                     });
+
+            //theGraph.ContainsFamily(typeof (ISingleInterface));
+            shouldHaveFamily<ISingleInterface>();
+            //shouldHaveFamily<IController>();
+        }
     }
 
+    public interface ISingleInterface
+    {
+    }
+
+    public class SingleInterface: ISingleInterface
+    {
+        
+    }
 
     public interface IController
     {

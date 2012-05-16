@@ -50,7 +50,7 @@ namespace StructureMap
         /// </summary>
         public static void ReleaseAndDisposeAllHttpScopedObjects()
         {
-            HttpContextLifecycle.DisposeAndClearAll();
+            //HttpContextLifecycle.DisposeAndClearAll();
         }
 
         public static void Initialize(Action<IInitializationExpression> action)

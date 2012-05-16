@@ -15,18 +15,18 @@ namespace StructureMap.Pipeline
 
         public void EjectAll()
         {
-            if (HttpContextLifecycle.HasContext())
-            {
-                _http.EjectAll();
-            }
+            //if (HttpContextLifecycle.HasContext())
+            //{
+            //    _http.EjectAll();
+            //}
             _nonHttp.EjectAll();
         }
 
         public IObjectCache FindCache()
         {
-            return HttpContextLifecycle.HasContext()
+            return /*HttpContextLifecycle.HasContext()
                        ? _http.FindCache()
-                       : _nonHttp.FindCache();
+                       :*/ _nonHttp.FindCache();
         }
 
         public abstract string Scope { get; }

@@ -282,8 +282,6 @@ namespace StructureMap.Graph
             return callingAssembly;
         }
 
-
-
         /// <summary>
         /// Adds the DefaultConventionScanner to the scanning operations.  I.e., a concrete
         /// class named "Something" that implements "ISomething" will be automatically 

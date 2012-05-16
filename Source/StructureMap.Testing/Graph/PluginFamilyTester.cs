@@ -225,44 +225,44 @@ namespace StructureMap.Testing.Graph
             family.DefaultInstanceKey.ShouldEqual(instance.Name);
         }
 
-        [Test]
-        public void set_the_scope_to_session()
-        {
-            var family = new PluginFamily(typeof (IServiceProvider));
-            family.SetScopeTo(InstanceScope.HttpSession);
+        //[Test]
+        //public void set_the_scope_to_session()
+        //{
+        //    var family = new PluginFamily(typeof (IServiceProvider));
+        //    family.SetScopeTo(InstanceScope.HttpSession);
 
-            family.Lifecycle.ShouldBeOfType<HttpSessionLifecycle>();
-        }
+        //    family.Lifecycle.ShouldBeOfType<HttpSessionLifecycle>();
+        //}
 
-        [Test]
-        public void set_the_scope_to_session_hybrid()
-        {
-            var family = new PluginFamily(typeof (IServiceProvider));
-            family.SetScopeTo(InstanceScope.HybridHttpSession);
+        //[Test]
+        //public void set_the_scope_to_session_hybrid()
+        //{
+        //    var family = new PluginFamily(typeof (IServiceProvider));
+        //    family.SetScopeTo(InstanceScope.HybridHttpSession);
 
-            family.Lifecycle.ShouldBeOfType<HybridSessionLifecycle>();
-        }
+        //    family.Lifecycle.ShouldBeOfType<HybridSessionLifecycle>();
+        //}
 
-        [Test]
-        public void SetScopeToHttpContext()
-        {
-            var family = new PluginFamily(typeof (IServiceProvider));
-            family.Lifecycle.ShouldBeNull();
+        //[Test]
+        //public void SetScopeToHttpContext()
+        //{
+        //    var family = new PluginFamily(typeof (IServiceProvider));
+        //    family.Lifecycle.ShouldBeNull();
 
-            family.SetScopeTo(InstanceScope.HttpContext);
-            Assert.IsInstanceOfType(typeof (HttpContextLifecycle), family.Lifecycle);
-        }
-
-
-        [Test]
-        public void SetScopeToHybrid()
-        {
-            var family = new PluginFamily(typeof (IServiceProvider));
+        //    family.SetScopeTo(InstanceScope.HttpContext);
+        //    Assert.IsInstanceOfType(typeof (HttpContextLifecycle), family.Lifecycle);
+        //}
 
 
-            family.SetScopeTo(InstanceScope.Hybrid);
-            Assert.IsInstanceOfType(typeof (HybridLifecycle), family.Lifecycle);
-        }
+        //[Test]
+        //public void SetScopeToHybrid()
+        //{
+        //    var family = new PluginFamily(typeof (IServiceProvider));
+
+
+        //    family.SetScopeTo(InstanceScope.Hybrid);
+        //    Assert.IsInstanceOfType(typeof (HybridLifecycle), family.Lifecycle);
+        //}
 
         [Test]
         public void SetScopeToSingleton()

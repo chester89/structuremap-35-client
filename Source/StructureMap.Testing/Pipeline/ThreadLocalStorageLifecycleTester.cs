@@ -102,22 +102,16 @@ namespace StructureMap.Testing.Pipeline
 
 			container =
 				new Container(
-					x =>
-					{
-						x.For<Rule>().HybridHttpOrThreadLocalScoped().Use(() => new ColorRule("Red"));
-					});
+					x => x.For<Rule>().Use(() => new ColorRule("Red")));
 
 			nestedContainer = container.GetNestedContainer();
 
 			int count = 0;
-			nestedContainer.Configure(x =>
-			{
-				x.For<Rule>().Transient().Use(() =>
-				{
-					count++;
-					return new ColorRule("Red" + count);
-				});
-			});
+			nestedContainer.Configure(x => x.For<Rule>().Transient().Use(() =>
+			                                                                 {
+			                                                                     count++;
+			                                                                     return new ColorRule("Red" + count);
+			                                                                 }));
 		}
 
 		#endregion

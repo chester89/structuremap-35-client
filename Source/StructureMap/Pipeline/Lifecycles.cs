@@ -14,20 +14,20 @@ namespace StructureMap.Pipeline
                 case InstanceScope.Singleton:
                     return new SingletonLifecycle();
 
-                case InstanceScope.HttpContext:
-                    return new HttpContextLifecycle();
+                //case InstanceScope.HttpContext:
+                //    return new HttpContextLifecycle();
 
                 case InstanceScope.ThreadLocal:
                     return new ThreadLocalStorageLifecycle();
 
-                case InstanceScope.Hybrid:
-                    return new HybridLifecycle();
+                //case InstanceScope.Hybrid:
+                //    return new HybridLifecycle();
 
-                case InstanceScope.HttpSession:
-                    return new HttpSessionLifecycle();
+                //case InstanceScope.HttpSession:
+                //    return new HttpSessionLifecycle();
 
-                case InstanceScope.HybridHttpSession:
-                    return new HybridSessionLifecycle();
+                //case InstanceScope.HybridHttpSession:
+                //    return new HybridSessionLifecycle();
 
                 case InstanceScope.Unique:
                     return new UniquePerRequestLifecycle();

@@ -223,23 +223,23 @@ namespace StructureMap.Configuration.DSL.Expressions
             return this;
         }
 
-        /// <summary>
-        /// Convenience method to mark a PluginFamily as a Hybrid lifecycle
-        /// </summary>
-        /// <returns></returns>
-        public CreatePluginFamilyExpression<PLUGINTYPE> HybridHttpOrThreadLocalScoped()
-        {
-            return lifecycleIs(InstanceScope.Hybrid);
-        }
+        ///// <summary>
+        ///// Convenience method to mark a PluginFamily as a Hybrid lifecycle
+        ///// </summary>
+        ///// <returns></returns>
+        //public CreatePluginFamilyExpression<PLUGINTYPE> HybridHttpOrThreadLocalScoped()
+        //{
+        //    return lifecycleIs(InstanceScope.Hybrid);
+        //}
 
-        /// <summary>
-        /// Convenience method to mark a PluginFamily as HttpContext scoped
-        /// </summary>
-        /// <returns></returns>
-        public CreatePluginFamilyExpression<PLUGINTYPE> HttpContextScoped()
-        {
-            return lifecycleIs(InstanceScope.HttpContext);
-        }
+        ///// <summary>
+        ///// Convenience method to mark a PluginFamily as HttpContext scoped
+        ///// </summary>
+        ///// <returns></returns>
+        //public CreatePluginFamilyExpression<PLUGINTYPE> HttpContextScoped()
+        //{
+        //    return lifecycleIs(InstanceScope.HttpContext);
+        //}
 
 
         /// <summary>

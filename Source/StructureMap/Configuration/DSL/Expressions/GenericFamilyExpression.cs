@@ -238,23 +238,23 @@ namespace StructureMap.Configuration.DSL.Expressions
         }
 
 
-        /// <summary>
-        /// Convenience method to mark a PluginFamily as a Hybrid lifecycle
-        /// </summary>
-        /// <returns></returns>
-        public GenericFamilyExpression HybridHttpOrThreadLocalScoped()
-        {
-            return LifecycleIs(InstanceScope.Hybrid);
-        }
+        ///// <summary>
+        ///// Convenience method to mark a PluginFamily as a Hybrid lifecycle
+        ///// </summary>
+        ///// <returns></returns>
+        //public GenericFamilyExpression HybridHttpOrThreadLocalScoped()
+        //{
+        //    return LifecycleIs(InstanceScope.Hybrid);
+        //}
 
-        /// <summary>
-        /// Convenience method to mark a PluginFamily as HttpContext scoped
-        /// </summary>
-        /// <returns></returns>
-        public GenericFamilyExpression HttpContextScoped()
-        {
-            return LifecycleIs(InstanceScope.HttpContext);
-        }
+        ///// <summary>
+        ///// Convenience method to mark a PluginFamily as HttpContext scoped
+        ///// </summary>
+        ///// <returns></returns>
+        //public GenericFamilyExpression HttpContextScoped()
+        //{
+        //    return LifecycleIs(InstanceScope.HttpContext);
+        //}
 
         /// <summary>
         /// 

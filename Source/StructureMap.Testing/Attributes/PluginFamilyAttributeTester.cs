@@ -116,8 +116,8 @@ namespace StructureMap.Testing.Attributes
         [Test]
         public void ScopeToInterceptorTypes()
         {
-            assertScopeLeadsToInterceptor(InstanceScope.HttpContext, typeof (HttpContextLifecycle));
-            assertScopeLeadsToInterceptor(InstanceScope.Hybrid, typeof (HybridLifecycle));
+            //assertScopeLeadsToInterceptor(InstanceScope.HttpContext, typeof (HttpContextLifecycle));
+            //assertScopeLeadsToInterceptor(InstanceScope.Hybrid, typeof (HybridLifecycle));
             assertScopeLeadsToInterceptor(InstanceScope.Singleton, typeof (SingletonLifecycle));
             assertScopeLeadsToInterceptor(InstanceScope.ThreadLocal, typeof (ThreadLocalStorageLifecycle));
         }

@@ -5,10 +5,10 @@ namespace StructureMap
         PerRequest,
         Singleton,
         ThreadLocal,
-        HttpContext,
-        Hybrid,
-        HttpSession,
-        HybridHttpSession,
+        //HttpContext,
+        //Hybrid,
+        //HttpSession,
+        //HybridHttpSession,
         Unique,
         Transient
     }
